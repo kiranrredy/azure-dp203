@@ -1,0 +1,41 @@
+{
+	"name": "pl_df_DimProd_surogatekey",
+	"properties": {
+		"activities": [
+			{
+				"name": "df_DimProduct_SurrogateKey",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "df_DimProduct_SurrogateKey",
+						"type": "DataFlowReference"
+					},
+					"staging": {
+						"linkedService": {
+							"referenceName": "ls_storagegen2kr",
+							"type": "LinkedServiceReference"
+						},
+						"folderPath": "staging"
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2023-10-26T02:59:12Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

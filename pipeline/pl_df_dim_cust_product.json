@@ -1,0 +1,137 @@
+{
+	"name": "pl_df_dim_cust_product",
+	"properties": {
+		"activities": [
+			{
+				"name": "df_DimCustomerAndProduct",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "df_DimCustomerAndProduct",
+						"type": "DataFlowReference",
+						"datasetParameters": {
+							"sourceCustomer": {
+								"SchemaName": {
+									"value": "@pipeline().parameters.SourceSchema",
+									"type": "Expression"
+								},
+								"TableName": {
+									"value": "@pipeline().parameters.SourceCustomerTable",
+									"type": "Expression"
+								}
+							},
+							"sourceProduct": {
+								"SchemaName": {
+									"value": "@pipeline().parameters.SourceSchema",
+									"type": "Expression"
+								},
+								"TableName": {
+									"value": "@pipeline().parameters.SourceProductTable",
+									"type": "Expression"
+								}
+							},
+							"sourceProductModel": {
+								"SchemaName": {
+									"value": "@pipeline().parameters.SourceSchema",
+									"type": "Expression"
+								},
+								"TableName": {
+									"value": "@pipeline().parameters.SourceProductModelTable",
+									"type": "Expression"
+								}
+							},
+							"sourceProductCategory": {
+								"SchemaName": {
+									"value": "@pipeline().parameters.SourceSchema",
+									"type": "Expression"
+								},
+								"TableName": {
+									"value": "@pipeline().parameters.SourceProductCategoryTable",
+									"type": "Expression"
+								}
+							},
+							"sinkDimCustomer": {
+								"TableName": {
+									"value": "@pipeline().parameters.TargetDimCustomer",
+									"type": "Expression"
+								},
+								"SchemaName": {
+									"value": "@pipeline().parameters.TargetSchema",
+									"type": "Expression"
+								}
+							},
+							"sinkDimProduct": {
+								"TableName": {
+									"value": "@pipeline().parameters.TargetDimProduct",
+									"type": "Expression"
+								},
+								"SchemaName": {
+									"value": "@pipeline().parameters.TargetSchema",
+									"type": "Expression"
+								}
+							}
+						}
+					},
+					"staging": {
+						"linkedService": {
+							"referenceName": "ls_storagegen2kr",
+							"type": "LinkedServiceReference"
+						},
+						"folderPath": "staging"
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
+			}
+		],
+		"parameters": {
+			"SourceSchema": {
+				"type": "string",
+				"defaultValue": "SalesLT"
+			},
+			"SourceCustomerTable": {
+				"type": "string",
+				"defaultValue": "Customer"
+			},
+			"SourceProductTable": {
+				"type": "string",
+				"defaultValue": "Product"
+			},
+			"SourceProductModelTable": {
+				"type": "string",
+				"defaultValue": "ProductModel"
+			},
+			"SourceProductCategoryTable": {
+				"type": "string",
+				"defaultValue": "ProductCategory"
+			},
+			"TargetSchema": {
+				"type": "string",
+				"defaultValue": "dbo"
+			},
+			"TargetDimCustomer": {
+				"type": "string",
+				"defaultValue": "DimCustomer"
+			},
+			"TargetDimProduct": {
+				"type": "string",
+				"defaultValue": "DimProduct"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2023-10-25T13:11:47Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

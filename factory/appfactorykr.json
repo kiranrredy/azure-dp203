@@ -1,0 +1,9 @@
+{
+	"name": "appfactorykr",
+	"location": "uksouth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "b7851f6a-531a-4614-9efe-94554405a2a0",
+		"tenantId": "02f7dde4-af9e-456a-a441-7c674a94499b"
+	}
+}

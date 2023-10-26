@@ -1,0 +1,19 @@
+{
+	"name": "ds_dl_Json_by_df",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_storagegen2kr",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "json-by-df"
+			}
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
