@@ -16,12 +16,11 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "ds_dl_csv_container",
+						"referenceName": "ds_dl_gen2_csv",
 						"type": "DatasetReference"
 					},
 					"fieldList": [
 						"exists",
-						"childItems",
 						"itemName",
 						"itemType"
 					],
@@ -30,7 +29,7 @@
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
-						"type": "BinaryReadSettings"
+						"type": "DelimitedTextReadSettings"
 					}
 				}
 			}
