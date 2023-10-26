@@ -22,7 +22,8 @@
 					"fieldList": [
 						"exists",
 						"itemName",
-						"itemType"
+						"itemType",
+						"contentMD5"
 					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
