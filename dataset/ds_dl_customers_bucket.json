@@ -1,5 +1,5 @@
 {
-	"name": "ds_dl_csv_container",
+	"name": "ds_dl_customers_bucket",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ls_storagegen2kr",
@@ -10,6 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"folderPath": "Customer",
 				"fileSystem": "csv-container"
 			}
 		}
