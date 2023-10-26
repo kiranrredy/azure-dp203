@@ -33,13 +33,13 @@
 				}
 			},
 			{
-				"name": "ForEach1",
+				"name": "ForEachFile",
 				"type": "ForEach",
 				"dependsOn": [
 					{
 						"activity": "GetContainerMetadata",
 						"dependencyConditions": [
-							"Failed"
+							"Succeeded"
 						]
 					}
 				],
