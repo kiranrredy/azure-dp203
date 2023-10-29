@@ -23,6 +23,10 @@
 			"type": "string",
 			"defaultValue": "https://storagegen2kr.dfs.core.windows.net/"
 		},
+		"ls_databricksws_properties_typeProperties_existingClusterId": {
+			"type": "string",
+			"defaultValue": "1029-144442-o2jsgtpe"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -61,6 +65,9 @@
 					},
 					"ls_storagegen2kr_properties_typeProperties_url": {
 						"value": "[parameters('ls_storagegen2kr_properties_typeProperties_url')]"
+					},
+					"ls_databricksws_properties_typeProperties_existingClusterId": {
+						"value": "[parameters('ls_databricksws_properties_typeProperties_existingClusterId')]"
 					}
 				}
 			},

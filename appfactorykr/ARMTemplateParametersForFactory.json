@@ -16,6 +16,9 @@
 		},
 		"ls_storagegen2kr_properties_typeProperties_url": {
 			"value": "https://storagegen2kr.dfs.core.windows.net/"
+		},
+		"ls_databricksws_properties_typeProperties_existingClusterId": {
+			"value": "1029-144442-o2jsgtpe"
 		}
 	}
 }
