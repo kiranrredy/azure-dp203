@@ -1,0 +1,13 @@
+{
+	"name": "ls_databricksws",
+	"properties": {
+		"annotations": [],
+		"type": "AzureDatabricks",
+		"typeProperties": {
+			"domain": "https://adb-5512701440037379.19.azuredatabricks.net",
+			"authentication": "MSI",
+			"workspaceResourceId": "/subscriptions/b1319966-5cbf-4f0d-9b21-4e1c037af480/resourceGroups/rg-sql-payg/providers/Microsoft.Databricks/workspaces/databricksws",
+			"existingClusterId": "1029-144442-o2jsgtpe"
+		}
+	}
+}
